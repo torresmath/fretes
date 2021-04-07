@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: fretes
+
+grpc:
+  client:
+    plaintext: true
+    max-retry-attempts: 10
+  channels:
+    fretes:
+      address: 'localhost:50051'
+      plaintext: true
+      max-retry-attempts: 10
+
+endpoints:
+#  all:
+#    port: 8085 Roda na porta 8080 por padrão
+#    sensitive: true
+  health:
+    enabled: true
+    sensitive: false
+    details-visible: ANONYMOUS
